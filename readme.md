@@ -6,19 +6,23 @@
 [![Built with Spacemacs](https://img.shields.io/badge/built%20with-Spacemacs-6F6BA7.svg?style=flat-square)](http://github.com/syl20bnr/spacemacs)
 
 ## Installation
+
 ```sh
-$ npm install -g totodo
+npm install -g totodo
 ```
 
 ## Usage
+
 ```sh
-$ totodo
+totodo
 ```
 
 ## Screenshots
+
 ![Main menu](screenshots/menu.png)
 ![Add a task](screenshots/add.png)
 ![Todo list](screenshots/tasks.png)
 
 ## License
+
 MIT &copy; [Darshak Parikh](https://github.com/dar5hak)
