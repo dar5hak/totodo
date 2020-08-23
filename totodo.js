@@ -4,7 +4,7 @@ const fs = require('fs')
 const path = require('path')
 
 const difference = require('lodash.difference')
-const pify = require('pify')
+const util = require('util')
 
 const askForNewTodo = require(path.join(__dirname, 'src', 'ask-for-new-todo'))
 const showMainMenu = require(path.join(__dirname, 'src', 'show-main-menu'))
@@ -14,7 +14,7 @@ const todoFile = path.join(process.env.HOME, '.totodo.json')
 
 const log = console.log.bind(console)
 
-const readTodos = () => pify(fs.readFile)(todoFile, 'utf8')
+const readTodos = () => util.promisify(fs.readFile)(todoFile, 'utf8')
   .catch(error => {
     return (error.code === 'ENOENT') ? '[]' : error
   })
@@ -26,7 +26,7 @@ const readTodos = () => pify(fs.readFile)(todoFile, 'utf8')
     }
   })
 
-const writeTodos = (todos) => pify(fs.writeFile)(todoFile, JSON.stringify(todos)).catch(log)
+const writeTodos = (todos) => util.promisify(fs.writeFile)(todoFile, JSON.stringify(todos)).catch(log)
 
 function runLoop () {
   showMainMenu()
