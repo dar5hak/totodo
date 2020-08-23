@@ -9,12 +9,12 @@ module.exports = () => inquirer.prompt({
     {
       name: 'Add a new task',
       value: 'add',
-      'short': 'Add'
+      short: 'Add'
     },
     {
       name: 'View your agenda',
       value: 'view',
-      'short': 'View'
+      short: 'View'
     },
     {
       name: 'Exit',
