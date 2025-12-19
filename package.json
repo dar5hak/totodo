@@ -30,6 +30,6 @@
     "lodash.difference": "^4.5.0"
   },
   "devDependencies": {
-    "standard": "^14.3.4"
+    "standard": "^17.1.2"
   }
 }
